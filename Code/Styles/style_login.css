@@ -9,14 +9,14 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 200px;
-    background: url('1c0785a0-13fe-11ee-928b-f932e73736bf.jpg') no-repeat;
+    background: url('../images/20100825AthleticsSammisTennisCourts01.jpg') no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size:cover 100%;
 }
 .box{
     border: 2px solid black;
     width: 400px;
-    margin-top: 1%;
+    margin-top: 9%;
     border-radius: 10px;
     padding: 30px 40px;
     backdrop-filter: blur(30px);
@@ -51,17 +51,6 @@ body{
 .box input::placeholder{
     color: black;
 }
-.box .status{
-    display: flex;
-    justify-content: space-between;
-    font-size: 17px;
-    font-weight: 550;
-    margin: 5px 0 5px;
-}
-.status label input{
-    accent-color: black;
-    margin: 5px;
-}
 .box i{
     position: absolute;
     right: 20px;
@@ -94,17 +83,17 @@ body{
 .btn:hover{
     box-shadow: 0 0 10px rgb(196, 196, 237);
 }
-.box .have_an_account{
+.box .do_not_have_an_account{
     font-size: 14px;
     text-align: center;
     margin-top: 5%;
     margin-bottom: 2%;
 }
-.have_an_account p a {
+.do_not_have_an_account p a {
     color: rgb(212, 212, 212);
     text-decoration: none;
     font-weight: 600;
 }
-.have_an_account p a:hover{
+.do_not_have_an_account p a:hover{
     text-decoration: underline;
 }

@@ -37,6 +37,7 @@ li a:hover:not(.active){
     background-color: rgb(44, 43, 43);
     top: 0;
     width: 100%;
+    align-items: center;
 }
 
 .active{
@@ -45,4 +46,12 @@ li a:hover:not(.active){
 
 .welcome_name{
     color: seagreen;
+}
+
+.logo{
+    float: left;
+    margin: 20px;
+    margin-right: 50px;
+    align-items: center;
+    color: white;
 }

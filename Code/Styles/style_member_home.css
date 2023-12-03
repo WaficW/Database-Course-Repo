@@ -21,7 +21,8 @@ li a{
     text-decoration: none;
 }
 
-li a:hover:not(.actice){
+li a:hover:not(.active){
+    transition: background-color 1s;
     background-color: rgb(0, 0, 0);
 }
 

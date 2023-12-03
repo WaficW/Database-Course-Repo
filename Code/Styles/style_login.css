@@ -12,6 +12,10 @@ body{
     background: url('../images/20100825AthleticsSammisTennisCourts01.jpg') no-repeat;
     background-position: center;
     background-size:cover 100%;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 .box{
     border: 2px solid black;
@@ -21,6 +25,8 @@ body{
     padding: 30px 40px;
     backdrop-filter: blur(30px);
     box-shadow: 0 0 10px black;
+    align-self: center;
+    margin-top: 200px;
 }
 .box h1{
     font-size: 40px;

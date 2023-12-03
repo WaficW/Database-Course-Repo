@@ -12,6 +12,10 @@ body{
     background: url('../images/1c0785a0-13fe-11ee-928b-f932e73736bf.jpg') no-repeat;
     background-position: center;
     background-size: cover;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 .box{
     border: 2px solid black;
@@ -21,6 +25,7 @@ body{
     padding: 30px 40px;
     backdrop-filter: blur(30px);
     box-shadow: 0 0 10px black;
+    margin-top: 110px;
 }
 .box h1{
     font-size: 40px;

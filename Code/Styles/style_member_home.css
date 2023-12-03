@@ -67,3 +67,12 @@ li a:hover:not(.active){
     padding: 10px;
     align-items: center;
 }
+
+.menu_select{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.box{
+    
+}

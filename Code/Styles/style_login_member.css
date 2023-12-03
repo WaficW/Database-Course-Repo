@@ -101,3 +101,15 @@ body{
 .do_not_have_an_account p a:hover{
     text-decoration: underline;
 }
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(44, 43, 43);
+    color: white;
+    text-align: center;
+    height: auto;
+    padding: 10px;
+    align-items: center;
+}

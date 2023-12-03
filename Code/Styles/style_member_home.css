@@ -42,3 +42,7 @@ li a:hover:not(.active){
 .active{
     background-color: seagreen;
 }
+
+.welcome_name{
+    color: seagreen;
+}

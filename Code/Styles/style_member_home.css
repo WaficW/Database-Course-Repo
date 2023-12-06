@@ -75,11 +75,46 @@ li a:hover:not(.active){
     align-items: center;
 }
 
-.menu_select{
+
+
+.menu_select {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: auto auto auto;
+    column-gap: 50px;
+    row-gap: 50px;
+    color: #000000;
+    font-size: 30px;
+    place-items: center;
+    padding-top: 5%;
 }
 
-.box{
-    
+.menu_select .box1 {
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 200px;
+    width: 400px;
+    padding: 20px;
+    background-image: url(207838500.jpg);
+    box-shadow: 0 0 10px black;
+    text-align: center;
+}
+.menu_select .box2 {
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 200px;
+    width: 400px;
+    padding: 20px;
+    background-image: url(207838500.jpg);
+    box-shadow: 0 0 10px black;
+    text-align: center;
+}
+.menu_select .box3 {
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 200px;
+    width: 400px;
+    padding: 20px;
+    background-image: url(207838500.jpg);
+    box-shadow: 0 0 10px black;
+    text-align: center;
 }

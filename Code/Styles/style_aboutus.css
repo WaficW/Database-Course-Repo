@@ -7,6 +7,11 @@ body{
     padding: 0;
     height: 100%;
     width: 100%;
+    background: url(../images/6174a0fd5b9a2b5471172a89_Hoop-City-Full-Court.jpg) no-repeat;
+    background-position: center center;
+    background-size:cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
 }
 
 li{
@@ -61,12 +66,23 @@ li a:hover:not(.active){
 .aboutus_text{
     float: left;
     display: inline;
-    width: 100%;
+    width: 80%;
+    margin-top: 9%;
+    border-radius: 10px;
+    backdrop-filter: blur(80px);
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .aboutus_pg{
     padding-left: 30px;
     padding-right: 30px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.aboutus_text h1{
+    font-size: 30px;
 }
 
 .footer{

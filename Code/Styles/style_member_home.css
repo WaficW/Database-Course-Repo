@@ -8,6 +8,7 @@ body{
     height: 100%;
     width: 100%;
     overflow: hidden;
+    overflow-y: scroll;
 }
 img {
     float:left;
@@ -62,7 +63,7 @@ li a:hover:not(.active){
 }
 
 .footer{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     background-color: rgb(44, 43, 43);
@@ -78,41 +79,97 @@ li a:hover:not(.active){
 .menu_select {
     display: grid;
     grid-template-columns: auto auto auto;
-    column-gap: 50px;
-    row-gap: 50px;
+    column-gap: 2%;
+    row-gap: 3%;
     color: #000000;
     font-size: 30px;
     place-items: center;
-    padding-top: 5%;
+    padding-top: 2%;
 }
 
 .menu_select .box1 {
     border: 2px solid black;
-    border-radius: 10px;
+    border-radius: 5px;
     height: 200px;
     width: 400px;
     padding: 20px;
-    background-image: url(207838500.jpg);
-    box-shadow: 0 0 10px black;
+    background: url(../images/sessions_edited.jpg) no-repeat;
     text-align: center;
+    background-position: center;
+    background-size: 115%;
+    cursor:pointer;
 }
 .menu_select .box2 {
     border: 2px solid black;
-    border-radius: 10px;
+    border-radius: 5px;
     height: 200px;
     width: 400px;
     padding: 20px;
-    background-image: url(207838500.jpg);
-    box-shadow: 0 0 10px black;
+    background: url(../images/sport_court_edited.jpg) no-repeat;
     text-align: center;
+    background-position: center;
+    background-size: 100%;
+    cursor:pointer;
 }
 .menu_select .box3 {
     border: 2px solid black;
-    border-radius: 10px;
+    border-radius: 5px;
     height: 200px;
     width: 400px;
     padding: 20px;
-    background-image: url(207838500.jpg);
-    box-shadow: 0 0 10px black;
+    background: url(../images/store_edited.jpg) no-repeat;
     text-align: center;
+    background-position: center;
+    background-size: 100%;
+    cursor:pointer;
+}
+
+.menu_select .box1:hover{
+    border: 2px solid rgb(137, 187, 158);
+    box-shadow: 0 0 20px seagreen;
+    
+}
+
+.menu_select .box2:hover{
+    border: 2px solid rgb(137, 187, 158);
+    box-shadow: 0 0 20px seagreen;
+}
+
+.menu_select .box3:hover{
+    border: 2px solid rgb(137, 187, 158);
+    box-shadow: 0 0 20px seagreen;
+}
+
+.menu_select a{
+    text-decoration: none;
+}
+
+.menu_select .box1 p{
+    color: #000000;
+    font-weight: bold;
+}
+
+.menu_select .box2 p{
+    color: #000000;
+    font-weight: bold;
+}
+
+.menu_select .box3 p{
+    color: #000000;
+    font-weight: bold;
+}
+
+.menu_select .box1 i{
+    font-size: 300%;
+    color: #000000;
+}
+
+.menu_select .box2 i{
+    font-size: 300%;
+    color: #000000;
+}
+
+.menu_select .box3 i{
+    font-size: 300%;
+    color: #000000;
 }

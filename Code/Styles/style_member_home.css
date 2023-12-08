@@ -86,7 +86,7 @@ li a:hover:not(.active){
     place-items: center;
 }
 
-.menu_select .box1 {
+.menu_select .row1 {
     border: 2px solid black;
     border-radius: 5px;
     height: 200px;
@@ -95,7 +95,7 @@ li a:hover:not(.active){
     text-align: center;
     cursor:pointer;
 }
-.menu_select .box2 {
+.menu_select .row2 {
     border: 2px solid black;
     border-radius: 5px;
     height: 200px;
@@ -103,63 +103,39 @@ li a:hover:not(.active){
     padding: 20px;
     text-align: center;
     cursor:pointer;
-}
-.menu_select .box3 {
-    border: 2px solid black;
-    border-radius: 5px;
-    height: 200px;
-    width: 400px;
-    text-align: center;
-    padding: 20px;
-    cursor:pointer;
+    padding-top: 30px;
 }
 
-.menu_select .box1:hover{
+.menu_select .row1:hover{
     border: 2px solid rgb(137, 187, 158);
     box-shadow: 0 0 20px seagreen;
     
 }
 
-.menu_select .box2:hover{
+.menu_select .row2:hover{
     border: 2px solid rgb(137, 187, 158);
     box-shadow: 0 0 20px seagreen;
 }
-
-.menu_select .box3:hover{
-    border: 2px solid rgb(137, 187, 158);
-    box-shadow: 0 0 20px seagreen;
-}
-
 .menu_select a{
     text-decoration: none;
 }
 
-.menu_select .box1 p{
+.menu_select .row1 p{
     color: #000000;
     font-weight: bold;
 }
 
-.menu_select .box2 p{
+.menu_select .row2 p{
     color: #000000;
     font-weight: bold;
 }
 
-.menu_select .box3 p{
-    color: #000000;
-    font-weight: bold;
-}
-
-.menu_select .box1 i{
+.menu_select .row1 i{
     font-size: 300%;
     color: #000000;
 }
 
-.menu_select .box2 i{
-    font-size: 300%;
-    color: #000000;
-}
-
-.menu_select .box3 i{
+.menu_select .row2 i{
     font-size: 300%;
     color: #000000;
 }

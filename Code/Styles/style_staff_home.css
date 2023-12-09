@@ -27,6 +27,7 @@ li a{
     padding: 20px 20px;
     text-decoration: none;
     transition: background-color 0.7s;
+    
 }
 
 li a:hover:not(.active){
@@ -94,6 +95,7 @@ li a:hover:not(.active){
     padding: 20px;
     text-align: center;
     cursor:pointer;
+    transition: box-shadow 0.7s;
 }
 .menu_select .row2 {
     border: 2px solid black;
@@ -104,6 +106,7 @@ li a:hover:not(.active){
     text-align: center;
     cursor:pointer;
     padding-top: 30px;
+    transition: box-shadow 0.7s;
 }
 
 .menu_select .row1:hover{

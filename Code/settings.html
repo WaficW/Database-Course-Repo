@@ -11,13 +11,44 @@
     </head>
 
     <body>
-        <a href="staff-homepage.html"> <!--OMAR SHOULD CHANGE WHERE THE BACK BUTTON REFDIRECTS-->
+        <a href="staff-homepage.html"> <!--OMAR SHOULD CHANGE WHERE THE BACK BUTTON REDIRECTS-->
             <div class="back_button">
                 Back
             </div>
         </a>
 
-        
+        <div class="container">
+            <form action="php/change_fname.php" method="post" class="fnamechange">
+                Change First Name:
+                    <br>
+                    <input type="text" placeholder="New First Name" name="FirstName"/><br><br>
+                    <input name="form" type="submit"/><br><br>
+                </p>
+            </form>
+
+            <br><br>
+
+            <form action="change_lname.php" method="post" class="lnamechange">
+                Change Last Name:
+                    <br>
+                    <input type="text" placeholder="New Last Name" name="LastName"/><br><br>
+                    <input name="form" type="submit"/><br><br>
+                </p>
+            </form>
+
+            <br><br>
+
+            <form action="change_password.php" method="post" class="change_password">
+                Change Password:
+                    <br>
+                    <input type="password" placeholder="New Password" name="Password"/><br><br>
+                    <input name="form" type="submit"/><br><br>
+                </p>
+            </form>
+
+
+        </div>
+            
     </body>
 
 </html>

@@ -1,27 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sports Facility Sign-in</title>
-    <link rel="stylesheet" href="Styles/style_createacc.css">
+    <link rel="stylesheet" href="Styles/style_createathacc.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script>
-        function divshow(x) {
-            if(x==0){
-                document.getElementById("team").style.display = "block";
-            }else{
-                document.getElementById("team").style.display = "none";
-            }
-            return;
-        }
-    </script>
     
 </head>
+
+<!--CHANGE BUTTON TO COACH HOMEPAGE-->
 
 <body>
     <a href="staff-homepage.html">
@@ -32,53 +22,51 @@
 
     <div class="box">
         <form action="">
-            <h1>Create Account</h1>
+            <h1>Create Athlete Account</h1>
+
             <div class="input">
                 <input type="text" placeholder="First Name" required/>
                 <i class='bx bx-user'></i>
             </div>
+
             <div class="input">
                 <input type="text" placeholder="Last Name" required/>
                 <i class='bx bx-user'></i>
             </div>
-            
-            
-            <div class="status">
-                <label for="Staff" class="radio-inline">
-                  <input type="radio" name="Status" value="s" id="staff" name="rad1" onclick="divshow(1)" required/>Staff</label>
-                <label for="Memeber" class="radio-inline">
-                  <input type="radio" name="Status" value="m" id="memeber" name="rad1" onclick="divshow(1)" required/>Member</label>
-                <label for="Coach" class="radio-inline">
-                    <input type="radio" name="Status" value="c" id="coach-radio" name="rad1" onclick="divshow(0)" checked required/>Coach</label>
+
+            <div class="input">
+                <input type="text" placeholder="Height" required/>
             </div>
-            
-            <div id='team' style="font-size: 16px; font-weight: 600;">
-                <label for="sport">Choose a sport: </label>
-                    <select id="sport" name="sport">
-                        <option value="football">Football Team</option>
-                        <option value="basketball">Basketball Team</option>
-                        <option value="tabletennis">Table Tennis Team</option>
-                    </select>
+
+            <div class="input">
+                <input type="text" placeholder="Weight" required/>
+            </div>
+
+            <div class="input">
+                <input type="text" placeholder="Position" required/>
             </div>
             
             <div class="input">
                 <input type="text" placeholder="E-mail" required/>
                 <i class='bx bx-envelope' ></i>
             </div>
+
             <div class="input">
                 <input type="password" placeholder="Password" required/>
                 <i class='bx bx-lock-alt' ></i>
             </div>
+
             <div class="input">
                 <input type="number" placeholder="Phone Number" required/>
                 <i class='bx bx-phone' ></i>
             </div>
+
+
             <button type="submit" class="btn">Create Account</button>
             
 
         </form>
     </div>
-
 
 </body>
 

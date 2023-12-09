@@ -14,5 +14,7 @@
         echo 'Password: ' . $_POST ["Password"] . '<br>';
 
         ?>
+
+        <a href="../html/settings.html">Back to Settings</a>
     </body>
 </html>

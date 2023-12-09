@@ -14,5 +14,7 @@
         echo 'First Name: ' . $_POST ["FirstName"] . '<br>';
 
         ?>
+
+        <a href="../html/settings.html">Back to Settings</a>
     </body>
 </html>

@@ -131,3 +131,17 @@ input::-webkit-inner-spin-button {
     cursor: pointer;
     transition: color 0.7s;
 }
+
+.box #team {
+    text-align: center;
+}
+
+.box #team #sport{
+    width: 45%;
+    border-color: black;
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+}

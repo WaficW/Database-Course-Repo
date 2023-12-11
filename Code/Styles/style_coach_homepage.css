@@ -1,0 +1,145 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+img {
+    float:left;
+    padding-left: 0.3%;
+    padding-right: 0.8%;
+    padding-top: 0.3%;
+}
+li{
+    float: left;
+}
+
+li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    transition: background-color 0.7s;
+    
+}
+
+li a:hover:not(.active){
+    background-color: rgb(0, 0, 0);
+}
+
+.menubar{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+    overflow: hidden;
+    position: fixed;
+    background-color: rgb(44, 43, 43);
+    top: 0;
+    width: 100%;
+    align-items: center;
+}
+
+.active{
+    background-color: seagreen;
+}
+
+.welcome_name{
+    color: seagreen;
+}
+
+.logo{
+    float: left;
+    margin: 20px;
+    margin-right: 50px;
+    align-items: center;
+    color: white;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(44, 43, 43);
+    color: white;
+    text-align: center;
+    height: auto;
+    padding: 10px;
+    align-items: center;
+}
+
+
+
+.menu_select {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 2%;
+    row-gap: 3%;
+    color: #000000;
+    font-size: 30px;
+    place-items: center;
+}
+
+.menu_select .row1 {
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 200px;
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+    cursor:pointer;
+    transition: box-shadow 0.7s;
+}
+.menu_select .row2 {
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 200px;
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+    cursor:pointer;
+    padding-top: 30px;
+    transition: box-shadow 0.7s;
+}
+
+.menu_select .row1:hover{
+    border: 2px solid rgb(137, 187, 158);
+    box-shadow: 0 0 20px seagreen;
+    
+}
+
+.menu_select .row2:hover{
+    border: 2px solid rgb(137, 187, 158);
+    box-shadow: 0 0 20px seagreen;
+}
+
+.menu_select a{
+    text-decoration: none;
+}
+
+.menu_select .row1 p{
+    color: #000000;
+    font-weight: bold;
+}
+
+.menu_select .row2 p{
+    color: #000000;
+    font-weight: bold;
+}
+
+.menu_select .row1 i{
+    font-size: 300%;
+    color: #000000;
+}
+
+.menu_select .row2 i{
+    font-size: 300%;
+    color: #000000;
+}

@@ -20,30 +20,27 @@
             return;
         }
     </script>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
+    <script src="/github%20repos/Database-Course-Repo/Code/validation.js" defer></script>
     
 </head>
 
 <body>
-    <a href="staff-homepage.html">
-        <div class="back_button">
-            Back
-        </div>
-    </a>
-
+    
     <div class="box">
-        <form action="">
+        <form action="signup.php" method="post" id="signup" novalidate>
             <h1>Create Account</h1>
             <div class="input">
-                <input type="text" placeholder="First Name" required/>
+                <input type="text" placeholder="First Name"  id="firstName" name="firstName"/>
                 <i class='bx bx-user'></i>
             </div>
             <div class="input">
-                <input type="text" placeholder="Last Name" required/>
+                <input type="text" placeholder="Last Name"  id="lastName" name="lastName"/>
                 <i class='bx bx-user'></i>
             </div>
             
             
-            <div class="status">
+            <div class="status" id="radioGroup">
                 <label for="Staff" class="radio-inline">
                   <input type="radio" name="Status" value="s" id="staff" name="rad1" onclick="divshow(1)" required/>Staff</label>
                 <label for="Memeber" class="radio-inline">
@@ -61,17 +58,17 @@
                         <option value="tabletennis">Table Tennis Team</option>
                     </select>
             </div>
-            
-            <div class="input">
-                <input type="text" placeholder="E-mail" required/>
+
+              <div class="input">
+                <input type="text" placeholder="E-mail"  id="email" name="email"/>
                 <i class='bx bx-envelope' ></i>
             </div>
             <div class="input">
-                <input type="password" placeholder="Password" required/>
+                <input type="password" placeholder="Password"  id="password" name="password"/>
                 <i class='bx bx-lock-alt' ></i>
             </div>
             <div class="input">
-                <input type="number" placeholder="Phone Number" required/>
+                <input type="number" placeholder="Phone Number"  id="number" name="number"/>
                 <i class='bx bx-phone' ></i>
             </div>
             <button type="submit" class="btn">Create Account</button>
@@ -79,7 +76,6 @@
 
         </form>
     </div>
-
 
 </body>
 

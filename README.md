@@ -10,4 +10,5 @@ This project uses the following technologies:
 - PHPMyAdmin
 - XAMPP
 - Apache
+
 *Made by Wafic, George, and Omar.

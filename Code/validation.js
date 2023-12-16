@@ -21,7 +21,8 @@ validation
         },
         {
             validator: (value) => () => {
-                return fetch("validate-email.php?email=" + encodeURIComponent(value))
+                console.log("Validation function called for email:", value);
+                return fetch("/github%20repos/Database-Course-Repo/Code/validate-email.php?email=" + encodeURIComponent(value))
                        .then(function(response) {
                            return response.json();
                        })

@@ -99,7 +99,7 @@ if ($stmt1->execute()) {
         $_SESSION["message"] = "Coach " . $_POST["firstName"] . " was added successfully";
     }
 
-    header("Location: /create-account.php");
+    header("Location: /github%20repos/Database-Course-Repo/Code/php/create-account.php");
     exit;
     
 } else {

@@ -21,9 +21,17 @@ validation
         },
         {
             validator: async (value) => {
-                const response = await fetch("validate-email.php?email=" + encodeURIComponent(value));
-                const json = await response.json();
-                return !json.available; // return the opposite of json.available
+                try {
+                    const response = await fetch("validate-email.php?email=" + encodeURIComponent(value));
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    const json = await response.json();
+                    return !json.available; // return the opposite of json.available
+                } catch (error) {
+                    console.error('There was a problem with the fetch operation: ', error);
+                    throw error; // re-throw the error to be handled by the validation library
+                }
             },
             errorMessage: "Email already taken"
         }
@@ -41,6 +49,6 @@ validation
             rule: "required"
         }
     ])
-    .onSuccess((event) => {
+    .onSuccess(() => {
         document.getElementById("signup").submit();
     });

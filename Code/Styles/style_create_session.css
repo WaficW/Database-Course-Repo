@@ -31,7 +31,22 @@ body{
     font-size: 40px;
     text-align: center; 
 }
-.box .input{
+
+.box .start_end_time{
+    display: flex;
+}
+
+.box .start_end_time .input{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    background-color: white;
+    border-radius: 15px;
+    margin-inline: 10px;
+}
+
+.box .start_date{
     position: relative;
     width: 100%;
     height: 50px;
@@ -39,11 +54,17 @@ body{
     background-color: white;
     border-radius: 15px;
 }
-.box .input:hover{
+
+.box .start_date:hover{
     background-color: rgb(196, 196, 237);
     border-radius: 15px;
 }
-.input input {
+
+.box .start_end_time .input:hover{
+    background-color: rgb(196, 196, 237);
+    border-radius: 15px;
+}
+.start_end_time .input input {
     width: 100%;
     height: 100%;
     background: transparent;
@@ -55,6 +76,20 @@ body{
     font-size: 16px;
     padding: 20px 45px 20px 20px; 
 }
+
+.start_date input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid black;
+    font-weight: 600;
+    border-radius: 15px;
+    font-size: 16px;
+    padding: 20px 45px 20px 20px; 
+}
+
 .box input::placeholder{
     color: black;
 }
@@ -68,6 +103,12 @@ body{
 .court_number label input{
     accent-color: seagreen;
     margin: 5px;
+}
+
+.court{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
 }
 
 .box .Days{

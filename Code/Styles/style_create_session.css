@@ -63,7 +63,7 @@ body{
     justify-content: space-between;
     font-size: 17px;
     font-weight: 550;
-    margin: 20px 0 5px;
+    margin: 10px 0 5px;
 }
 .court_number label input{
     accent-color: seagreen;

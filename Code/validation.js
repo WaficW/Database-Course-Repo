@@ -23,9 +23,9 @@ validation
             validator: async (value) => {
                 const response = await fetch("validate-email.php?email=" + encodeURIComponent(value));
                 const json = await response.json();
-                return json.available;
+                return !json.available; // return the opposite of json.available
             },
-            errorMessage: "email already taken"
+            errorMessage: "Email already taken"
         }
     ])
     .addField("#password", [

@@ -37,7 +37,7 @@ if (isset($_SESSION["user_id"])) {
         </ul>
 
         <p style="padding-top: 50px;"></p>
-        <?php if (isset($user) &&$isRole): ?>
+        <?php if (isset($user) && $isRole): ?>
         <h1 style="margin-left: 50px;"> How's it kickin' <span class="welcome_name"> <?= htmlspecialchars($user["firstName"]) ?></span>?</h1>
             
             <div class="menu_select">

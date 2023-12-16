@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 if (empty($_POST["firstName"])) {
     die("First ame is required");
 }
@@ -87,7 +89,17 @@ $stmt1->bind_param("i",
 
 if ($stmt1->execute()) {
 
-    header("Location: ../create-account.html");
+    if($_POST["Status"] === 'm'){
+        $_SESSION["message"] = "Member " . $_POST["firstName"] . " was added successfully";
+    }
+    if($_POST["Status"] === 's'){
+        $_SESSION["message"] = "Staff " . $_POST["firstName"] . " was added successfully";
+    }
+    if($_POST["Status"] === 'c'){
+        $_SESSION["message"] = "Coach " . $_POST["firstName"] . " was added successfully";
+    }
+
+    header("Location: /create-account.php");
     exit;
     
 } else {

@@ -24,7 +24,7 @@
         <form action="">
             <h1>Create Session</h1>
 
-            <div style="font-family: Arial, Helvetica, sans-serif; font-size: 20px; font-weight: 600;">
+            <div class="court">
                 <br>
                 Select Court:
             </div>
@@ -37,12 +37,14 @@
                 <label for="Court3" class="radio-inline">
                     <input type="radio" name="court_nb" required/>Court 3</label>
             </div>
-            <div>
+            
+            <div class="start_end_time">
+                
                 <div class="input">
                     <input type="time" placeholder="Start time" required />
                     <i class='bx bxs-time' ></i>
                 </div>
-
+                
                 <div class="input">
                     <input type="time" placeholder="Start time" required />
                     <i class='bx bxs-time' ></i>
@@ -63,13 +65,8 @@
                 <label for="Saturday" class="radio-inline">
                     <input type="checkbox" name="Saturday" required/>Saturday</label>
             </div>
-            
-            <div class="input">
-                <input type="number" placeholder="Number of Sessions/Week" required />
-                <i class='bx bx-expand-vertical'></i>
-            </div>
 
-            <div class="input">
+            <div class="start_date">
                 <input type="date" placeholder="Date Of Birth" required />
                 <i class='bx bxs-calendar' ></i>
             </div>

@@ -24,9 +24,9 @@
         <form action="">
             <h1>Create Session</h1>
 
-            <div class="input">
-                <input type="text" placeholder="Session Name" required />
-                <i class='bx bx-rename'></i>
+            <div style="font-family: Arial, Helvetica, sans-serif; font-size: 20px; font-weight: 600;">
+                <br>
+                Select Court:
             </div>
 
             <div class="court_number">
@@ -37,25 +37,31 @@
                 <label for="Court3" class="radio-inline">
                     <input type="radio" name="court_nb" required/>Court 3</label>
             </div>
+            <div>
+                <div class="input">
+                    <input type="time" placeholder="Start time" required />
+                    <i class='bx bxs-time' ></i>
+                </div>
 
-            <div class="input">
-                <input type="time" placeholder="Start time" required />
-                <i class='bx bxs-time' ></i>
+                <div class="input">
+                    <input type="time" placeholder="Start time" required />
+                    <i class='bx bxs-time' ></i>
+                </div>
             </div>
 
             <div class="Days">
                 <label for="Monday" class="radio-inline">
-                    <input type="radio" name="Monday" />Monday</label>
+                    <input type="checkbox" name="Monday" required/>Monday</label>
                 <label for="Tuesday" class="radio-inline">
-                    <input type="radio" name="Tuesday" />Tuesday</label>
+                    <input type="checkbox" name="Tuesday" required/>Tuesday</label>
                 <label for="Wednesday" class="radio-inline">
-                    <input type="radio" name="Wednesday" />Wednesday</label>
+                    <input type="checkbox" name="Wednesday" required/>Wednesday</label>
                 <label for="Thursday" class="radio-inline">
-                    <input type="radio" name="Thursday" />Thursday</label>
+                    <input type="checkbox" name="Thursday" required/>Thursday</label>
                 <label for="Friday" class="radio-inline">
-                    <input type="radio" name="Friday" />Friday</label>
+                    <input type="checkbox" name="Friday" required/>Friday</label>
                 <label for="Saturday" class="radio-inline">
-                    <input type="radio" name="Saturday" />Saturday</label>
+                    <input type="checkbox" name="Saturday" required/>Saturday</label>
             </div>
             
             <div class="input">

@@ -30,8 +30,8 @@ if (isset($_SESSION["user_id"])) {
     <body>
         <ul class="menubar">
             <a href=""><img src="images/SFlogo.png" alt="Our Logo"></a>
-            <li><a class="active" href="member-homepage.html"> HOME </a></li>
-            <li><a href="aboutus.html"> ABOUT US </a></li>
+            <li><a class="active"> HOME </a></li>
+            <li><a href="/github%20repos/Database-Course-Repo/Code/aboutus.html"> ABOUT US </a></li>
         </ul>
 
         <p style="padding-top: 50px;"></p>
@@ -39,12 +39,12 @@ if (isset($_SESSION["user_id"])) {
             
         <?php if ($isset($user)): ?>
             <div class="menu_select">
-                <a href="/Database-Course-Repo/Code/create-session.html"><div class="row1"><i class='bx bxs-calendar-plus'></i><p>Create Sessions</p></div></a>
+                <a href="/github%20repos/Database-Course-Repo/Code/create-session.html"><div class="row1"><i class='bx bxs-calendar-plus'></i><p>Create Sessions</p></div></a>
                 <a href=""><div class="row1"><i class='bx bx-book'></i><p>Book Court</p></div></a>
                 <a href=""><div class="row1"><i class='bx bxs-calendar-exclamation' ></i><p>My Reservations</p></div></a>
-                <a href="/Database-Course-Repo/Code/create-athlete-account.html"><div class="row2"><i class='bx bx-user-plus'></i><p>Add Athlete</p></div></a>
+                <a href="/github%20repos/Database-Course-Repo/Code/create-athlete-account.html"><div class="row2"><i class='bx bx-user-plus'></i><p>Add Athlete</p></div></a>
                 <a href=""><div class="row2"><i class='bx bxs-user-account'></i><p>Manage Team</p></div></a>
-                <a href="/Database-Course-Repo/Code/settings.html""><div class="row2"><i class='bx bxs-cog'></i><p>My Settings</p></div></a>
+                <a href="/github%20repos/Database-Course-Repo/Code/settings.html""><div class="row2"><i class='bx bxs-cog'></i><p>My Settings</p></div></a>
             </div>
         <?php else: ?>
         

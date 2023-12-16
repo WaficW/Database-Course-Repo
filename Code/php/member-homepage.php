@@ -13,7 +13,7 @@ if (isset($_SESSION["user_id"])) {
     
     $user = $result->fetch_assoc();
 
-    $isRole = $user["status"] ==='s';
+    $isRole = $user["status"] ==='m';
 }
 
 ?>
@@ -25,13 +25,13 @@ if (isset($_SESSION["user_id"])) {
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sports Facility Homepage</title>
-        <link rel="stylesheet" href="Styles/style_staff_home.css">
+        <link rel="stylesheet" href="../Styles/style_member_home.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
 
     <body>
         <ul class="menubar">
-            <a href=""><img src="images/SFlogo.png" alt="Our Logo"></a>
+            <a href=""><img src="../images/SFlogo.png" alt="Our Logo"></a>
             <li><a class="active" href="member-homepage.html"> HOME </a></li>
             <li><a href="aboutus.html"> ABOUT US </a></li>
         </ul>
@@ -42,16 +42,15 @@ if (isset($_SESSION["user_id"])) {
         <h1 style="margin-left: 50px;"> <a href="logout.php">Log out</a></h1>
 
             <div class="menu_select">
-                <a href="create-account.html"><div class="row1"><i class='bx bxs-edit-alt'></i><p>Create Account</p></div></a>
-                <a href=""><div class="row1"><i class='bx bxs-user-account'></i><p>Manage Accounts</p></div></a>
-                <a href=""><div class="row1"><i class='bx bx-book'></i><p>Manage Reservations</p></div></a>
-                <a href=""><div class="row2"><i class='bx bxs-calendar-exclamation' ></i><p>Manage Classes</p></div></a>
-                <a href="settings.html"><div class="row2"><i class='bx bxs-cog'></i><p>My Settings</p></div></a>
+                <a href=""><div class="row1"><i class='bx bx-book'></i><p>Book Sessions</p></div></a>
+                <a href=""><div class="row1"><i class='bx bx-wallet'></i><p>Rent Courts</p></div></a>
+                <a href="/github%20repos/Database-Course-Repo/Code/settings.html"><div class="row2"><i class='bx bxs-cog'></i><p>My Settings</p></div></a>
+                <a href=""><div class="row2"><i class='bx bx-book'></i><p>My Sessions</p></div></a>
+                <a href=""><div class="row2"><i class='bx bx-wallet'></i><p>My Reservations</p></div></a>
             </div>
         <?php else: ?>
-        
             <h1 style="margin-left: 50px;"> <a href="login.php">Log in</a></h1>
-    
+
         <?php endif; ?> 
             <div class="footer">
                 <div class="icons">

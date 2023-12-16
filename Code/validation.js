@@ -20,16 +20,12 @@ validation
             rule: "email"
         },
         {
-            validator: (value) => () => {
-                return fetch("validate-email.php?email=" + encodeURIComponent(value))
-                       .then(function(response) {
-                           return response.json();
-                       })
-                       .then(function(json) {
-                           return json.available;
-                       });
+            validator: async (value) => {
+                const response = await fetch("validate-email.php?email=" + encodeURIComponent(value));
+                const json = await response.json();
+                return !json.available; // return the opposite of json.available
             },
-            errorMessage: "email already taken"
+            errorMessage: "Email already taken"
         }
     ])
     .addField("#password", [

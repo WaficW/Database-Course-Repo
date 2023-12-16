@@ -87,7 +87,7 @@ $stmt1->bind_param("i",
 
 if ($stmt1->execute()) {
 
-    header("Location: member-homepage.html");
+    header("Location: ../create-account.html");
     exit;
     
 } else {

@@ -30,7 +30,7 @@ validation
                            return json.available;
                        });
             },
-            errorMessage: "email already taken"
+            errorMessage: "Email already taken"
         }
     ])
     .addField("#password", [
@@ -46,6 +46,6 @@ validation
             rule: "required"
         }
     ])
-    .onSuccess((event) => {
+    .onSuccess(() => {
         document.getElementById("signup").submit();
     });

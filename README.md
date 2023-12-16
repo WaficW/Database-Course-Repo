@@ -11,4 +11,4 @@ This project uses the following technologies:
 - XAMPP
 - Apache
 
-*Made by Wafic, George, and Omar.
+> Made by Wafic, George, and Omar.

@@ -115,5 +115,7 @@ td, th{
 .del_button{
     color: white;
     background-color: rgb(255, 83, 83);
+    padding: 10px;
     border-radius: 5px;
+    text-decoration: none;
 }

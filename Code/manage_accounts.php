@@ -22,8 +22,8 @@ $result = mysqli_query($mysqli, $query);
 
     <body>
         <ul class="menubar">
-            <a href="member-homepage.html"><img src="images/SFlogo.png" alt="Our Logo"></a>
-            <li><a href="member-homepage.html"> HOME </a></li>
+            <a href="php/member-homepage.php"><img src="images/SFlogo.png" alt="Our Logo"></a>
+            <li><a href="php/member-homepage.php"> HOME </a></li>
             <li><a class="active" href="aboutus.html"> ABOUT US </a></li>
         </ul>
 
@@ -49,7 +49,7 @@ $result = mysqli_query($mysqli, $query);
                         <td><?php echo $rows['lastName']; ?></td>
                         <td><?php echo $rows['status']; ?></td>
                         <td><?php echo $rows['email']; ?></td>
-                        <td><?php echo $rows['phoneNumber']; ?></td>
+                        <td><?php echo $rows['number']; ?></td>
                         <td><a href="delete.php?id=<?php echo $rows['id'];?>" class="del_button">Delete</a></td>
                     </tr>
 

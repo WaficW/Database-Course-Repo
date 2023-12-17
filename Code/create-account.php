@@ -13,7 +13,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sports Facility Sign-in</title>
-    <link rel="stylesheet" href="../Styles/style_createacc.css">
+    <link rel="stylesheet" href="Styles/style_createacc.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script>
         function divshow(x) {
@@ -27,13 +27,15 @@ session_start();
     </script>
     <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
     <script src="/github%20repos/Database-Course-Repo/Code/validation.js" defer></script>
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
     
     <div class="box">
-        <form action="signup.php" method="post" id="signup" novalidate>
+        <form action="/github%20repos/Database-Course-Repo/Code/php/signup.php" method="post" id="signup" novalidate>
             <h1>Create Account</h1>
             <?php 
     

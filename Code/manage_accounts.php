@@ -1,6 +1,8 @@
 <?php
 
 require_once('php/demo.php');
+require_once('delete.php');
+
 $query = 'SELECT * FROM registration';
 $result = mysqli_query($mysqli, $query);
 
@@ -35,17 +37,20 @@ $result = mysqli_query($mysqli, $query);
                         <td>Status</td>
                         <td>Email</td>
                         <td>Phone Number</td>
+                        <td>Delete Account</td>
                     </tr>
                     <tr>
                     <?php
                         while($rows=mysqli_fetch_assoc($result))
                         {
                     ?>
+                        <td hidden><?php echo $rows['id']; ?></td>
                         <td><?php echo $rows['firstName']; ?></td>
                         <td><?php echo $rows['lastName']; ?></td>
                         <td><?php echo $rows['status']; ?></td>
                         <td><?php echo $rows['email']; ?></td>
                         <td><?php echo $rows['phoneNumber']; ?></td>
+                        <td><a href="delete.php?id=<?php echo $rows['id'];?>" class="del_button">Delete</a></td>
                     </tr>
 
                     <?php

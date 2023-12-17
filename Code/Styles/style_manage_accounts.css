@@ -81,3 +81,39 @@ li a:hover:not(.active){
     margin-top: auto;
     flex-shrink: 0
 }
+
+.container{
+    margin-top:100px;
+    margin-right: 20px;
+    margin-left: 20px;
+
+}
+
+.title{
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.table_title{
+    color: #588c7e;
+    font-size: 20px;
+}
+
+.table{
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+    border: 1px solid rgb(133, 133, 133);
+    text-align: center;
+}
+
+td, th{
+    border: 1px solid rgb(133, 133, 133);
+    padding: 8px;
+}
+
+.del_button{
+    color: white;
+    background-color: rgb(255, 83, 83);
+    border-radius: 5px;
+}

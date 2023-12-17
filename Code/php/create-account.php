@@ -33,7 +33,7 @@ session_start();
 <body>
     
     <div class="box">
-        <form action="/github%20repos/Database-Course-Repo/Code/php/signup.php" method="post" id="signup" novalidate>
+        <form action="signup.php" method="post" id="signup" novalidate>
             <h1>Create Account</h1>
             <?php 
     

@@ -20,18 +20,15 @@ validation
             rule: "email"
         },
         {
-            validator: async (value) => {
-                try {
-                    const response = await fetch("validate-email.php?email=" + encodeURIComponent(value));
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                    const json = await response.json();
-                    return !json.available; // return the opposite of json.available
-                } catch (error) {
-                    console.error('There was a problem with the fetch operation: ', error);
-                    throw error; // re-throw the error to be handled by the validation library
-                }
+            validator: (value) => () => {
+                console.log("Validation function called for email:", value);
+                return fetch("/github%20repos/Database-Course-Repo/Code/validate-email.php?email=" + encodeURIComponent(value))
+                       .then(function(response) {
+                           return response.json();
+                       })
+                       .then(function(json) {
+                           return json.available;
+                       });
             },
             errorMessage: "Email already taken"
         }

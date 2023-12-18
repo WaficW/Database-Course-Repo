@@ -28,19 +28,19 @@
 
     <body>
         <ul class="menubar">
-            <? if($user["status"]==="c"): ?>
+            <?php if($user["status"]==="c"): ?>
                 <a href="coach-homepage.php"><img src="images/SFlogo.png" alt="Our Logo"></a>
                 <li><a href="coach-homepage.php"> HOME </a></li>
                 <li><a class="active" href="aboutus.php"> ABOUT US </a></li>
-            <? elseif($user["status"]==="s") ?>
+            <?php elseif($user["status"]==="s") ?>
                 <a href="staff-homepage.php"><img src="images/SFlogo.png" alt="Our Logo"></a>
                 <li><a href="staff-homepage.php"> HOME </a></li>
                 <li><a class="active" href="aboutus.php"> ABOUT US </a></li>
-            <? elseif($user["status"]==="m" or $user["status"]==="a") ?>
+            <?php elseif($user["status"]==="m" or $user["status"]==="a") ?>
                 <a href="member-homepage.php"><img src="images/SFlogo.png" alt="Our Logo"></a>
                 <li><a href="member-homepage.php"> HOME </a></li>
                 <li><a class="active" href="aboutus.php"> ABOUT US </a></li>
-            <? endif; ?>
+            <?php endif; ?>
         </ul>
         <!--OMAR SHOULD CHANGE WHERE THE HOME BUTTON AND LOGO REFDIRECTS-->
         <p style="padding-top: 50px;"></p>

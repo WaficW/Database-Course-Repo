@@ -53,11 +53,11 @@
 
             <div class="court">
                 Select Total Number of Sessions:
+                <div class="input">
+                    <input type="number" placeholder="Total Number Of Sessions" required />
+                </div>
             </div>
             
-            <div class="input">
-                    <input type="number" placeholder="Total Number Of Sessions" required />
-            </div>
 
             <div class="Days">
                 <label for="Monday" class="radio-inline">

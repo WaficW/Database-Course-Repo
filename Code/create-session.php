@@ -51,9 +51,12 @@
                 </div>
             </div>
 
-            <div class="input">
+            <div class="court">
                 Select Total Number of Sessions:
-                <input type="number" placeholder="Total Number Of Sessions" required />
+            </div>
+            
+            <div class="input">
+                    <input type="number" placeholder="Total Number Of Sessions" required />
             </div>
 
             <div class="Days">

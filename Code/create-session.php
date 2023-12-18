@@ -51,6 +51,10 @@
                 </div>
             </div>
 
+            <div class="court">
+                <br>
+            Select Date:
+            </div>
             <div class="start_date">
                 <input type="date" placeholder="Date Of Birth" required />
                 <i class='bx bxs-calendar' ></i>

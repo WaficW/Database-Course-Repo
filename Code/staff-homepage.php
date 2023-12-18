@@ -32,7 +32,7 @@ if (isset($_SESSION["user_id"])) {
     <body>
         <ul class="menubar">
             <a href=""><img src="images/SFlogo.png" alt="Our Logo"></a>
-            <li><a class="active" href="member-homepage.php"> HOME </a></li>
+            <li><a class="active" href="staff-homepage.php"> HOME </a></li>
             <li><a href="aboutus.php"> ABOUT US </a></li>
         </ul>
 
@@ -42,11 +42,11 @@ if (isset($_SESSION["user_id"])) {
         <h1 style="margin-left: 50px;"> <a href="logout.php">Log out</a></h1>
 
             <div class="menu_select">
-                <a href="create-account.html"><div class="row1"><i class='bx bxs-edit-alt'></i><p>Create Account</p></div></a>
-                <a href=""><div class="row1"><i class='bx bxs-user-account'></i><p>Manage Accounts</p></div></a>
+                <a href="create-account.php"><div class="row1"><i class='bx bxs-edit-alt'></i><p>Create Account</p></div></a>
+                <a href="manage_accounts.php"><div class="row1"><i class='bx bxs-user-account'></i><p>Manage Accounts</p></div></a>
                 <a href=""><div class="row1"><i class='bx bx-book'></i><p>Manage Reservations</p></div></a>
                 <a href=""><div class="row2"><i class='bx bxs-calendar-exclamation' ></i><p>Manage Classes</p></div></a>
-                <a href="settings.html"><div class="row2"><i class='bx bxs-cog'></i><p>My Settings</p></div></a>
+                <a href="settings.php"><div class="row2"><i class='bx bxs-cog'></i><p>My Settings</p></div></a>
             </div>
         <?php else: ?>
         

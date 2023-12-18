@@ -1,3 +1,19 @@
+<?php
+    session_start();
+    if(isset($_SESSION['user_id'])){
+        $mysqli = require __DIR__ . "/demo.php";
+    
+        $sql = "SELECT * FROM registration
+            WHERE id = {$_SESSION["user_id"]}";
+            
+        $result = $mysqli->query($sql);
+    
+        $user = $result->fetch_assoc();
+    } else{
+        header("Location: member-homepage.php");
+        exit;
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,11 +27,25 @@
     </head>
 
     <body>
-        <a href=""> <!--OMAR SHOULD CHANGE WHERE THE BACK BUTTON REDIRECTS-->
+        <?php if($user["status"]==="c"): ?>
+            <a href="coach-homepage.php">
+                <div class="back_button">
+                    Back
+                </div>
+            </a>
+        <?php elseif($user["status"]==="s"): ?>
+            <a href="staff-homepage.php">
+                <div class="back_button">
+                    Back
+                </div>
+            </a>
+        <?php elseif($user["status"]==="m" or $user["status"]==="a"): ?>
+        <a href="member-homepage.php">
             <div class="back_button">
                 Back
             </div>
         </a>
+        <?php endif; ?>
         <div class="container">
             <form action="change_fname.php" method="post" class="fnamechange">
                 <h3>Change First Name:</h3>
@@ -26,7 +56,7 @@
 
             <br><br>
 
-            <form action="php/change_lname.php" method="post" class="lnamechange">
+            <form action="change_lname.php" method="post" class="lnamechange">
                 <h3>Change Last Name:</h3>
                     <input type="text" placeholder="New Last Name" name="LastName" class="NewLN"/><br>
                     <input name="form" type="submit" class="submit"/><br>
@@ -35,7 +65,7 @@
 
             <br><br>
 
-            <form action="php/change_password.php" method="post" class="change_password">
+            <form action="change_password.php" method="post" class="change_password">
                 <h3>Change Password:</h3>
                     <input type="password" placeholder="New Password" name="Password" class="NewPW"/><br>
                     <input name="form" type="submit" class="submit"/><br>

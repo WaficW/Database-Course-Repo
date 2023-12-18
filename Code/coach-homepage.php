@@ -33,7 +33,7 @@ if (isset($_SESSION["user_id"])) {
         <ul class="menubar">
             <a href=""><img src="images/SFlogo.png" alt="Our Logo"></a>
             <li><a class="active"> HOME </a></li>
-            <li><a href="/github%20repos/Database-Course-Repo/Code/aboutus.html"> ABOUT US </a></li>
+            <li><a href="aboutus.php"> ABOUT US </a></li>
         </ul>
 
         <p style="padding-top: 50px;"></p>

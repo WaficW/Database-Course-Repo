@@ -32,8 +32,8 @@ if (isset($_SESSION["user_id"])) {
     <body>
         <ul class="menubar">
             <a href=""><img src="images/SFlogo.png" alt="Our Logo"></a>
-            <li><a class="active" href="member-homepage.html"> HOME </a></li>
-            <li><a href="aboutus.html"> ABOUT US </a></li>
+            <li><a class="active" href="member-homepage.php"> HOME </a></li>
+            <li><a href="aboutus.php"> ABOUT US </a></li>
         </ul>
 
         <p style="padding-top: 50px;"></p>

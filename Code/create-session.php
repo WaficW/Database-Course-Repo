@@ -51,13 +51,6 @@
                 </div>
             </div>
 
-            <div class="court">
-                Select Total Number of Sessions:
-                <div class="input">
-                    <input type="number" placeholder="Total Number Of Sessions" required />
-                </div>
-            </div>
-
             <div class="start_date">
                 <input type="date" placeholder="Date Of Birth" required />
                 <i class='bx bxs-calendar' ></i>

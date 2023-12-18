@@ -39,12 +39,13 @@ if (isset($_SESSION["user_id"])) {
         <p style="padding-top: 50px;"></p>
         <?php if (isset($user) && $isRole): ?>
         <h1 style="margin-left: 50px;"> How's it kickin' <span class="welcome_name"> <?= htmlspecialchars($user["firstName"]) ?></span>?</h1>
+        <h1 style="margin-left: 50px;"> <a href="logout.php">Log out</a></h1>
             
             <div class="menu_select">
                 <a href="/github%20repos/Database-Course-Repo/Code/create-session.html"><div class="row1"><i class='bx bxs-calendar-plus'></i><p>Create Sessions</p></div></a>
                 <a href=""><div class="row1"><i class='bx bx-book'></i><p>Book Court</p></div></a>
                 <a href=""><div class="row1"><i class='bx bxs-calendar-exclamation' ></i><p>My Reservations</p></div></a>
-                <a href="/github%20repos/Database-Course-Repo/Code/create-athlete-account.html"><div class="row2"><i class='bx bx-user-plus'></i><p>Add Athlete</p></div></a>
+                <a href="create-athlete-account.php"><div class="row2"><i class='bx bx-user-plus'></i><p>Add Athlete</p></div></a>
                 <a href=""><div class="row2"><i class='bx bxs-user-account'></i><p>Manage Team</p></div></a>
                 <a href="/github%20repos/Database-Course-Repo/Code/settings.html""><div class="row2"><i class='bx bxs-cog'></i><p>My Settings</p></div></a>
             </div>

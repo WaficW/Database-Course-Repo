@@ -1,3 +1,19 @@
+<?php
+    session_start();
+    if(isset($_SESSION['user_id'])){
+        $mysqli = require __DIR__ . "/demo.php";
+    
+        $sql = "SELECT * FROM registration
+            WHERE id = {$_SESSION["user_id"]}";
+            
+        $result = $mysqli->query($sql);
+    
+        $user = $result->fetch_assoc();
+    } else{
+        header("Location: member-homepage.php");
+        exit;
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,9 +28,19 @@
 
     <body>
         <ul class="menubar">
-            <a href=""><img src="images/SFlogo.png" alt="Our Logo"></a>
-            <li><a href=""> HOME </a></li>
-            <li><a class="active" href="aboutus.html"> ABOUT US </a></li>
+            <? if($user["status"]==="c"): ?>
+                <a href="coach-homepage.php"><img src="images/SFlogo.png" alt="Our Logo"></a>
+                <li><a href="coach-homepage.php"> HOME </a></li>
+                <li><a class="active" href="aboutus.php"> ABOUT US </a></li>
+            <? elseif($user["status"]==="s") ?>
+                <a href="staff-homepage.php"><img src="images/SFlogo.png" alt="Our Logo"></a>
+                <li><a href="staff-homepage.php"> HOME </a></li>
+                <li><a class="active" href="aboutus.php"> ABOUT US </a></li>
+            <? elseif($user["status"]==="m" or $user["status"]==="a") ?>
+                <a href="member-homepage.php"><img src="images/SFlogo.png" alt="Our Logo"></a>
+                <li><a href="member-homepage.php"> HOME </a></li>
+                <li><a class="active" href="aboutus.php"> ABOUT US </a></li>
+            <? endif; ?>
         </ul>
         <!--OMAR SHOULD CHANGE WHERE THE HOME BUTTON AND LOGO REFDIRECTS-->
         <p style="padding-top: 50px;"></p>

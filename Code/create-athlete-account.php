@@ -17,7 +17,6 @@ if (isset($_SESSION["user_id"])) {
 } else {
     header("Location: member-homepage.php");
     exit;
-
 }
 
 ?>
@@ -38,89 +37,90 @@ if (isset($_SESSION["user_id"])) {
 </head>
 
 <body>
-    <a href="coach-homepage.html">
-        <div class="back_button">
-            Back
+        <a href="coach-homepage.php">
+            <div class="back_button">
+                Back
+            </div>
+        </a>
+
+        <div class="box">
+        <?php if($isRole!='c'): ?>
+            <h1 style="margin-left: 50px;"> Restricted Access
+            <?php if($isRole=='m'): ?>
+                <h2 style="margin-left: 50px;"> <a href="member-homepage.php">Return</a></h2>
+            <?php elseif($isRole=='s'): ?>
+                <h2 style="margin-left: 50px;"> <a href="staff-homepage.php">Return</a></h2>
+            <?php endif; ?>
+        </h1>
+            
+    <?php else: ?>
+            <form action="athlete-signup.php" method="post">
+                <h1>Create Athlete Account</h1>
+                <?php 
+        
+                    if(isset($_SESSION['message']))
+                    {
+                        ?>
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                <strong></strong> <?= $_SESSION['message']; ?>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        <?php 
+                    unset($_SESSION['message']);
+                }
+                ?>
+                <div class="input">
+                    <input type="text" placeholder="First Name" required title="First Name" id="firstName" name="firstName"/>
+                    <i class='bx bx-user'></i>
+                </div>
+
+                <div class="input">
+                    <input type="text" placeholder="Last Name" required title="Last Name" id="lastName" name="lastName"/>
+                    <i class='bx bx-user'></i>
+                </div>
+
+                <div class="input">
+                    <input type="numder" placeholder="Height (Meters)" required title="Height" id="height" name="height"/>
+                    <i class='bx bx-up-arrow-alt'></i>
+                </div>
+
+                <div class="input">
+                    <input type="number" placeholder="Weight (KG)" required title="Weight" id="weight" name="weight"/>
+                    <i class='bx bx-scan'></i>
+                </div>
+
+                <div class="input">
+                    <input type="text" placeholder="Position" title="Position" id="position" name="position"/>
+                    <i class='bx bx-cross'></i>
+                </div>
+                
+                <div class="input">
+                    <input type="text" placeholder="E-mail" required title="E-mail" id="email" name="email"/>
+                    <i class='bx bx-envelope' ></i>
+                </div>
+
+                <div class="input">
+                    <input type="password" placeholder="Password" required id="password" name="password"/>
+                    <i class='bx bx-lock-alt' ></i>
+                </div>
+
+                <div class="input">
+                    <input type="number" placeholder="Phone Number" required title="Phone Number" id="number" name="number"/>
+                    <i class='bx bx-phone' ></i>
+                </div>
+
+                <div class="input">
+                    <input type="date" placeholder="Date Of Birth" required id="dob" name="dob"/>
+                    <i class='bx bxs-calendar' ></i>
+                </div>
+
+
+                <button type="submit" class="btn">Create Account</button>
+                
+
+            </form>
         </div>
-    </a>
-
-    <div class="box">
-        <form action="athlete-signup.php" method="post">
-            <h1>Create Athlete Account</h1>
-            <?php 
-    
-                if(isset($_SESSION['message']))
-                {
-                    ?>
-                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                            <strong></strong> <?= $_SESSION['message']; ?>
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </div>
-                    <?php 
-                unset($_SESSION['message']);
-            }
-            ?>
-            <div class="input">
-                <input type="text" placeholder="First Name" required title="First Name" id="firstName" name="firstName"/>
-                <i class='bx bx-user'></i>
-            </div>
-
-            <div class="input">
-                <input type="text" placeholder="Last Name" required title="Last Name" id="lastName" name="lastName"/>
-                <i class='bx bx-user'></i>
-            </div>
-
-            <div class="input">
-                <input type="numder" placeholder="Height (Meters)" required title="Height" id="height" name="height"/>
-                <i class='bx bx-up-arrow-alt'></i>
-            </div>
-
-            <div class="input">
-                <input type="number" placeholder="Weight (KG)" required title="Weight" id="weight" name="weight"/>
-                <i class='bx bx-scan'></i>
-            </div>
-
-            <div id='team' style="font-size: 16px; font-weight: 600; display: block;" >
-                <br>
-                <label for="sport">Choose a sport: </label>
-                    <select id="sport" name="sport" >
-                        <option value="football" class="FT">Football Team</option>
-                        <option value="basketball">Basketball Team</option>
-                        <option value="tabletennis">Table Tennis Team</option>
-                    </select>
-            </div>
-
-            <div class="input">
-                <input type="text" placeholder="Position" title="Position" id="position" name="position"/>
-                <i class='bx bx-cross'></i>
-            </div>
-            
-            <div class="input">
-                <input type="text" placeholder="E-mail" required title="E-mail" id="email" name="email"/>
-                <i class='bx bx-envelope' ></i>
-            </div>
-
-            <div class="input">
-                <input type="password" placeholder="Password" required id="password" name="password"/>
-                <i class='bx bx-lock-alt' ></i>
-            </div>
-
-            <div class="input">
-                <input type="number" placeholder="Phone Number" required title="Phone Number" id="number" name="number"/>
-                <i class='bx bx-phone' ></i>
-            </div>
-
-            <div class="input">
-                <input type="date" placeholder="Date Of Birth" required id="dob" name="dob"/>
-                <i class='bx bxs-calendar' ></i>
-            </div>
-
-
-            <button type="submit" class="btn">Create Account</button>
-            
-
-        </form>
-    </div>
+    <?php endif; ?>
 
 </body>
 

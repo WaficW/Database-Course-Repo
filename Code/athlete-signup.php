@@ -2,6 +2,18 @@
 
 session_start();
 
+if (isset($_SESSION["user_id"])) {
+    
+    $mysqli3 = require __DIR__ . "/demo.php";
+    
+    $sql4 = "SELECT * FROM teams
+            WHERE coachID = {$_SESSION["user_id"]}";
+            
+    $result = $mysqli3->query($sql4) or die($mysqli3->error);
+    
+    $user = $result->fetch_assoc();
+}
+
 if (empty($_POST["firstName"])) {
     die("First ame is required");
 }
@@ -65,13 +77,13 @@ $result = $mysqli->query($sql2);
 
 $userID = $result->fetch_assoc();
 
-if($_POST["sport"] === "football"){
+if($user["teamID"] === "1"){
     $sql1 = "INSERT INTO athlete (id, height, weight, teamID, position, dob)
     VALUES (?, ?, ?, 1, ?, ?)";
-} elseif($_POST["sport"] === "basketball"){
+} elseif($user["teamID"] === "2"){
     $sql1 = "INSERT INTO athlete (id, height, weight, teamID, position, dob)
     VALUES (?, ?, ?, 2, ?, ?)";
-} elseif($_POST["sport"] === "tabletennis"){
+} elseif($user["teamID"] === "3"){
     $sql1 = "INSERT INTO athlete (id, height, weight, teamID, position, dob)
     VALUES (?, ?, ?, 3, ?, ?)";
 }
@@ -93,7 +105,7 @@ if ($stmt1->execute()) {
 
     $_SESSION["message"] = "Athlete " . $_POST["firstName"] . " was added successfully";
 
-    header("Location: /github%20repos/Database-Course-Repo/Code/create-athlete-account.html");
+    header("Location: /github%20repos/Database-Course-Repo/Code/create-athlete-account.php");
     exit;
     
 } else {

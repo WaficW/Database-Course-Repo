@@ -38,6 +38,11 @@
                     <input type="radio" name="court_nb" required/>Court 3</label>
             </div>
             
+            <div class="court">
+                <br>
+            Select Start and End Time:
+            </div>
+
             <div class="start_end_time">
                 
                 <div class="input">

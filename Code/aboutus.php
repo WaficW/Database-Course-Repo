@@ -32,11 +32,11 @@
                 <a href="coach-homepage.php"><img src="images/SFlogo.png" alt="Our Logo"></a>
                 <li><a href="coach-homepage.php"> HOME </a></li>
                 <li><a class="active" href="aboutus.php"> ABOUT US </a></li>
-            <?php elseif($user["status"]==="s") ?>
+            <?php elseif($user["status"]==="s"): ?>
                 <a href="staff-homepage.php"><img src="images/SFlogo.png" alt="Our Logo"></a>
                 <li><a href="staff-homepage.php"> HOME </a></li>
                 <li><a class="active" href="aboutus.php"> ABOUT US </a></li>
-            <?php elseif($user["status"]==="m" or $user["status"]==="a") ?>
+            <?php elseif($user["status"]==="m" or $user["status"]==="a"): ?>
                 <a href="member-homepage.php"><img src="images/SFlogo.png" alt="Our Logo"></a>
                 <li><a href="member-homepage.php"> HOME </a></li>
                 <li><a class="active" href="aboutus.php"> ABOUT US </a></li>

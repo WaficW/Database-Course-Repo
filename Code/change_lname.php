@@ -52,6 +52,6 @@ if (!$stmt->execute()) {
 
         ?>
 
-        <a href="/settings.html">Back to Settings</a>
+        <a href="settings.php">Back to Settings</a>
     </body>
 </html>

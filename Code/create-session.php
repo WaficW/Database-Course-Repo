@@ -58,20 +58,21 @@
                 </div>
             </div>
             
-
+            <div class="court">
+                Select Number of Sessions Per Week:
             <div class="Days">
-                <label for="Monday" class="radio-inline">
-                    <input type="checkbox" name="Monday" required/>Monday</label>
-                <label for="Tuesday" class="radio-inline">
-                    <input type="checkbox" name="Tuesday" required/>Tuesday</label>
-                <label for="Wednesday" class="radio-inline">
-                    <input type="checkbox" name="Wednesday" required/>Wednesday</label>
-                <label for="Thursday" class="radio-inline">
-                    <input type="checkbox" name="Thursday" required/>Thursday</label>
-                <label for="Friday" class="radio-inline">
-                    <input type="checkbox" name="Friday" required/>Friday</label>
-                <label for="Saturday" class="radio-inline">
-                    <input type="checkbox" name="Saturday" required/>Saturday</label>
+                <label for="1" class="radio-inline">
+                    <input type="checkbox" name="1" required/>1</label>
+                <label for="2" class="radio-inline">
+                    <input type="checkbox" name="2" required/>2</label>
+                <label for="3" class="radio-inline">
+                    <input type="checkbox" name="3" required/>3</label>
+                <label for="4" class="radio-inline">
+                    <input type="checkbox" name="4" required/>4</label>
+                <label for="5" class="radio-inline">
+                    <input type="checkbox" name="5" required/>5</label>
+                <label for="6" class="radio-inline">
+                    <input type="checkbox" name="6" required/>6</label>
             </div>
 
             <div class="start_date">

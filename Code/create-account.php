@@ -33,7 +33,12 @@ session_start();
 </head>
 
 <body>
-    
+        <a href="staff-homepage.php">
+            <div class="back_button">
+                Back
+            </div>
+        </a>
+
     <div class="box">
         <form action="signup.php" method="post" id="signup" novalidate>
             <h1>Create Account</h1>

@@ -51,6 +51,11 @@
                 </div>
             </div>
 
+            <div class="start-date">
+                <input type="number" placeholder="Total Number Of Sessions" required />
+                <i class='bx bx-envelope' ></i>
+            </div>
+
             <div class="Days">
                 <label for="Monday" class="radio-inline">
                     <input type="checkbox" name="Monday" required/>Monday</label>

@@ -58,7 +58,7 @@ $result = mysqli_query($mysqli, $query);
         <ul class="menubar">
             <a href="coach-homepage.php"><img src="images/SFlogo.png" alt="Our Logo"></a>
             <li><a href="coach-homepage.php"> HOME </a></li>
-            <li><a class="active" href="aboutus.php"> ABOUT US </a></li>
+            <li><a class="" href="aboutus.php"> ABOUT US </a></li>
         </ul>
 
         <div class="container">

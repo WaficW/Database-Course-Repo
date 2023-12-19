@@ -23,10 +23,9 @@ $result = mysqli_query($mysqli, $query);
 
     <body>
         <ul class="menubar">
-            <a href=""><img src="images/SFlogo.png" alt="Our Logo"></a>
-            <li><a href=""> HOME </a></li>
-            <!--LINK NEEDS FIXING-->
-            <li><a class="active" href="aboutus.php"> ABOUT US </a></li>
+            <a href="staff-homepage.php"><img src="images/SFlogo.png" alt="Our Logo"></a>
+            <li><a href="staff-homepage.php"> HOME </a></li>
+            <li><a class="" href="aboutus.php"> ABOUT US </a></li>
         </ul>
 
         <div class="container">

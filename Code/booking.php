@@ -24,7 +24,7 @@ if(isset($_GET['id'])) {
     mysqli_stmt_bind_param($stmt, 'ii', $id, $user["id"]);
 
     if (mysqli_stmt_execute($stmt)) {
-        header("Location: manage_accounts.php");
+        header("Location: member-homepage.php");
         exit(); 
     } else {
         echo "Error deleting account: " . mysqli_error($mysqli);

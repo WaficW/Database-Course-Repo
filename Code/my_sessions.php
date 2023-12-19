@@ -4,7 +4,7 @@ session_start();
 require_once('demo.php');
 require_once('delete.php');
 
-$query = 'SELECT * FROM sessionparticipation SP NATURAL JOIN sessions S NATURAL JOIN resgistration R WHERE bookerID = '.$_SESSION['user_id'].'';
+$query = 'SELECT * FROM sessionparticipation SP NATURAL JOIN sessions S NATURAL JOIN registration R WHERE S.coachID=R.id AND SP.bookerID = '.$_SESSION['user_id'].'';
 $result = mysqli_query($mysqli, $query);
 
 ?>
@@ -47,15 +47,15 @@ $result = mysqli_query($mysqli, $query);
                         while($rows=mysqli_fetch_assoc($result))
                         {
                     ?>
-                        <td hidden><?php echo $rows['S.sessionID']; ?></td>
-                        <td><?php echo $rows['R.firstName']; ?></td>
-                        <td><?php echo $rows['R.lastName']; ?></td>
-                        <td><?php echo $rows['S.sport']; ?></td>
-                        <td><?php echo $rows['S.court']; ?></td>
+                        <td hidden><?php echo $rows['sessionID']; ?></td>
+                        <td><?php echo $rows['firstName']; ?></td>
+                        <td><?php echo $rows['lastName']; ?></td>
+                        <td><?php echo $rows['sport']; ?></td>
+                        <td><?php echo $rows['court']; ?></td>
                         <td><?php echo $rows['startTime']; ?></td>
                         <td><?php echo $rows['endTime']; ?></td>
                         <td><?php echo $rows['sessionDate']; ?></td>
-                        <td><a href="delete_booking.php?id=<?php echo $rows['S.sessionID'];?>" class="del_button">Delete</a></td>
+                        <td><a href="delete_session_book.php?id=<?php echo $rows['sessionID'];?>" class="del_button">Delete</a></td>
                     </tr>
 
                     <?php

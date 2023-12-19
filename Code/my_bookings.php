@@ -4,7 +4,24 @@ session_start();
 require_once('demo.php');
 require_once('delete.php');
 
-$query = 'SELECT * FROM bookings WHERE bookerID = '.$_SESSION['user_id'].'';
+if (isset($_SESSION["user_id"])) {
+    
+    $mysqli = require __DIR__ . "/demo.php";
+    
+    $sql = "SELECT * FROM registration
+            WHERE id = {$_SESSION["user_id"]}";
+            
+    $result = $mysqli->query($sql);
+    
+    $user = $result->fetch_assoc();
+
+    $isRole = $user["status"] ==='a';
+}
+if(!$isRole){
+    $query = 'SELECT * FROM bookings WHERE bookerID = '.$_SESSION['user_id'].'';
+} else{
+    $query = 'SELECT * FROM bookings WHERE bookerID = '.$_SESSION['user_id'].' OR bookerID IN (SELECT coachID FROM teams WHERE teamID = (SELECT teamID FROM athlete WHERE id = '.$_SESSION['user_id'].'))';
+}
 $result = mysqli_query($mysqli, $query);
 
 ?>

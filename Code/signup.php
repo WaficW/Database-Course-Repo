@@ -70,11 +70,11 @@ $result = $mysqli->query($sql2);
 
 $userID = $result->fetch_assoc();
 
-if($_POST["sport"] === "football"){
+if($_POST["sport"] === "footballt"){
     $sql1 = "UPDATE teams SET coachID=? WHERE teamID=1";
-} elseif($_POST["sport"] === "basketball"){
+} elseif($_POST["sport"] === "basketballt"){
     $sql1 = "UPDATE teams SET coachID=? WHERE teamID=2";
-} elseif($_POST["sport"] === "tabletennis"){
+} elseif($_POST["sport"] === "tabletennist"){
     $sql1 = "UPDATE teams SET coachID=? WHERE teamID=3";
 }
 

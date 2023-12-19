@@ -76,11 +76,14 @@ session_start();
             
             <div id='team' style="font-size: 16px; font-weight: 600; display: none;" >
                 <br>
-                <label for="sport">Choose a sport: </label>
+                <label for="sport">Choose a sport or team: </label>
                     <select id="sport" name="sport" >
-                        <option value="football" class="FT">Football Team</option>
-                        <option value="basketball">Basketball Team</option>
-                        <option value="tabletennis">Table Tennis Team</option>
+                        <option value="footballt" class="FT">Football Team</option>
+                        <option value="basketballt">Basketball Team</option>
+                        <option value="tabletennist">Table Tennis Team</option>
+                        <option value="football">Football</option>
+                        <option value="basketball">Basketball</option>
+                        <option value="tabletennis">Table Tennis</option>
                     </select>
             </div>
 

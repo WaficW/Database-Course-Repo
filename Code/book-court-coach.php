@@ -11,8 +11,6 @@
     
 </head>
 
-<!--CHANGE BUTTON TO CORRESPONDING HOMEPAGE-->
-
 <body>
     <a href="">
         <div class="back_button">
@@ -21,22 +19,8 @@
     </a>
 
     <div class="box">
-        <form action="member-homepage.php">
+        <form action="coach-homepage.php">
             <h1>Book Court</h1>
-
-            <div class="court">
-                <br>
-                Select Sport:
-            </div>
-
-            <div class="court_number">
-                <label for="Football" class="radio-inline">
-                    <input type="radio" name="court_nb" required/>Football</label>
-                <label for="Basketball" class="radio-inline">
-                    <input type="radio" name="court_nb" required/>Basketball</label>
-                <label for="TableTennis" class="radio-inline">
-                    <input type="radio" name="court_nb" required/>Table Tennis</label>
-            </div>
 
             <div class="court">
                 <br>

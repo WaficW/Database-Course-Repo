@@ -18,8 +18,6 @@ session_start();
 
 </head>
 
-<!--CHANGE BUTTON TO COACH HOMEPAGE-->
-
 <body>
     <a href="coach-homepage.php">
         <div class="back_button">

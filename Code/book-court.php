@@ -19,7 +19,7 @@
     </a>
 
     <div class="box">
-        <form action="">
+        <form action="court-book.php" method="post">
             <h1>Book Court</h1>
 
             <div class="court">
@@ -29,11 +29,11 @@
 
             <div class="court_number">
                 <label for="Football" class="radio-inline">
-                    <input type="radio" name="court_nb" required/>Football</label>
+                    <input type="radio" name="sport" value="football" required/>Football</label>
                 <label for="Basketball" class="radio-inline">
-                    <input type="radio" name="court_nb" required/>Basketball</label>
+                    <input type="radio" name="sport" value="basketball" required/>Basketball</label>
                 <label for="TableTennis" class="radio-inline">
-                    <input type="radio" name="court_nb" required/>Table Tennis</label>
+                    <input type="radio" name="sport" value="tabletennis" required/>Table Tennis</label>
             </div>
 
             <div class="court">
@@ -43,27 +43,27 @@
 
             <div class="court_number">
                 <label for="Court1" class="radio-inline">
-                    <input type="radio" name="court_nb" required/>Court 1</label>
+                    <input type="radio" name="court_nb" value=1 required/>Court 1</label>
                 <label for="Court2" class="radio-inline">
-                    <input type="radio" name="court_nb" required/>Court 2</label>
+                    <input type="radio" name="court_nb" value=2 required/>Court 2</label>
                 <label for="Court3" class="radio-inline">
-                    <input type="radio" name="court_nb" required/>Court 3</label>
+                    <input type="radio" name="court_nb" value=3 required/>Court 3</label>
             </div>
             
             <div class="court">
                 <br>
-            Select Start and End Time:
+                Select Start and End Time:
             </div>
 
             <div class="start_end_time">
                 
                 <div class="input">
-                    <input type="time" placeholder="Start time" required />
+                    <input type="time" placeholder="Start time" required id="startTime" name="startTime"/>
                     <i class='bx bxs-time' ></i>
                 </div>
                 
                 <div class="input">
-                    <input type="time" placeholder="Start time" required />
+                    <input type="time" placeholder="Start time" required id="endTime" name="endTime"/>
                     <i class='bx bxs-time' ></i>
                 </div>
             </div>
@@ -73,7 +73,7 @@
             Select Date:
             </div>
             <div class="start_date">
-                <input type="date" placeholder="Date Of Birth" required />
+                <input type="date" placeholder="Date Of Birth" required id="date" name="date"/>
                 <i class='bx bxs-calendar' ></i>
             </div>
 

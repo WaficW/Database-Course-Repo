@@ -3,7 +3,7 @@
 session_start();
 
 require_once('demo.php');
-require_once('delete.php');
+require_once('delete-ath.php');
 
 $query = 'SELECT * FROM athlete A NATURAL JOIN registration R;';
 $result = mysqli_query($mysqli, $query);

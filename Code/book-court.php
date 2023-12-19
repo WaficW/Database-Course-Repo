@@ -14,14 +14,14 @@
 <!--CHANGE BUTTON TO CORRESPONDING HOMEPAGE-->
 
 <body>
-    <a href="">
+    <a href="member-homepage.php">
         <div class="back_button">
             Back
         </div>
     </a>
 
     <div class="box">
-        <form action="member-homepage.php">
+        <form action="">
             <h1>Book Court</h1>
 
             <div class="court">

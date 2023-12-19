@@ -50,9 +50,9 @@ $result = mysqli_query($mysqli, $query);
                         <td><?php echo $rows['courtID']; ?></td>
                         <td><?php echo $rows['sport']; ?></td>
                         <td><?php echo $rows['startTime']; ?></td>
-                        <td><?php echo $rows['EndTime']; ?></td>
+                        <td><?php echo $rows['endTime']; ?></td>
                         <td><?php echo $rows['bookingDate']; ?></td>
-                        <td><a href="delete_booking.php?id=<?php echo $rows['id'];?>" class="del_button">Delete</a></td>
+                        <td><a href="delete_booking.php?id=<?php echo $rows['bookingID'];?>" class="del_button">Delete</a></td>
                     </tr>
 
                     <?php

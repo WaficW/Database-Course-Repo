@@ -4,7 +4,7 @@ session_start();
 require_once('demo.php');
 require_once('delete.php');
 
-$query = 'SELECT * FROM sessions WHERE coachID = '.$_SESSION['user_id'].'';
+$query = 'SELECT * FROM sessions';
 $result = mysqli_query($mysqli, $query);
 
 ?>
@@ -47,12 +47,12 @@ $result = mysqli_query($mysqli, $query);
                         {
                     ?>
                         <td hidden><?php echo $rows['sessionID']; ?></td>
-                        <td><?php echo $rows['courtID']; ?></td>
+                        <td><?php echo $rows['court']; ?></td>
                         <td><?php echo $rows['sport']; ?></td>
                         <td><?php echo $rows['startTime']; ?></td>
-                        <td><?php echo $rows['EndTime']; ?></td>
+                        <td><?php echo $rows['endTime']; ?></td>
                         <td><?php echo $rows['sessionDate']; ?></td>
-                        <td><a href="delete_session.php?id=<?php echo $rows['id'];?>" class="del_button">Delete</a></td>
+                        <td><a href="delete_session.php?id=<?php echo $rows['sessionID'];?>" class="del_button">Delete</a></td>
                     </tr>
 
                     <?php

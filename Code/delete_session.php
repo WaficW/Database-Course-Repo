@@ -4,7 +4,7 @@ require_once('demo.php');
 if(isset($_GET['id'])) {
     $id = $_GET['id'];
     
-    $delete_query = "DELETE FROM registration WHERE id = ?";
+    $delete_query = "DELETE FROM sessions WHERE sessionID = ?";
     $stmt = mysqli_prepare($mysqli, $delete_query);
     mysqli_stmt_bind_param($stmt, 'i', $id);
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 19, 2023 at 08:19 PM
+-- Generation Time: Dec 19, 2023 at 08:25 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -157,7 +157,7 @@ INSERT INTO `registration` (`id`, `firstName`, `lastName`, `status`, `email`, `p
 (39, 'Ardag', 'Assadurian', 'a', 'ardag.assadurian@lau.edu', '$2y$10$BY44qo5r7FdFPCf3FJy4JOpilnjOvUrg8StWDGlE/lsuNJ8qmklme', 81452789),
 (42, 'Mahmoud', 'Kibbeh', 'a', 'mahmoud.kibbeh@lau.edu', '$2y$10$zejvIN3NLUFwDwdAygetl.2teHTu1EidhLh26JGQMSgKjKILYKOVm', 81452367),
 (43, 'Abed', 'Al Taki', 'c', 'abed.altaki@lau.edu', '$2y$10$3XS085vK.frJuYtreqxQI.JdMN4MFOOQZQmJTYpXtleud7B1FvEki', 70900109),
-(44, 'Joe', 'Tekli', 'm', 'joe.tekli@lau.edu', '$2y$10$.07wIXOn.ZGoae4OkZhMmOrv0MfM9DCNQpdsHxm0M.AsF9ZUrA2/K', 81452783),
+(44, 'Joe', 'Tekli', 's', 'joe.tekli@lau.edu', '$2y$10$.07wIXOn.ZGoae4OkZhMmOrv0MfM9DCNQpdsHxm0M.AsF9ZUrA2/K', 81452783),
 (46, 'Adam', 'Al Kotob', 'm', 'adam.alkotob@lau.edu', '$2y$10$WoVry9843Q.BMFPPSlg8besxyKktFWB4i7wRaurH/cHXGJGDEDqT2', 81256478),
 (50, 'Yusuf', 'Kalash', 'c', 'yusuf.kalash@lau.edu', '$2y$10$BPDhaI.Obz8A/AtlL3KCXeBpDJzygp7Vtycm8D.kagjvr8b3pr2li', 81234785),
 (51, 'Kamal', 'Al Taki', 'c', 'kamal.altaki@lau.edu', '$2y$10$i43IeXjJitEuu1.3ahKBwexYu5jFNJf/Fk/MfBM4kKKTqokrnvFGe', 81754235),

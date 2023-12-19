@@ -44,7 +44,7 @@ if (isset($_SESSION["user_id"])) {
             <div class="menu_select">
                 <a href="create-account.php"><div class="row1"><i class='bx bxs-edit-alt'></i><p>Create Account</p></div></a>
                 <a href="manage_accounts.php"><div class="row1"><i class='bx bxs-user-account'></i><p>Manage Accounts</p></div></a>
-                <a href="manage_bookings"><div class="row1"><i class='bx bx-book'></i><p>Manage Bookings</p></div></a>
+                <a href="manage_bookings.php"><div class="row1"><i class='bx bx-book'></i><p>Manage Bookings</p></div></a>
                 <a href="manage_sessions.php"><div class="row2"><i class='bx bxs-calendar-exclamation' ></i><p>Manage Sessions</p></div></a>
                 <a href="settings.php"><div class="row2"><i class='bx bxs-cog'></i><p>My Settings</p></div></a>
             </div>

@@ -11,8 +11,6 @@
     
 </head>
 
-<!--CHANGE BUTTON TO CORRESPONDING HOMEPAGE-->
-
 <body>
     <a href="member-homepage.php">
         <div class="back_button">

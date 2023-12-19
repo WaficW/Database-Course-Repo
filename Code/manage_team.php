@@ -21,15 +21,16 @@ if (isset($_SESSION["user_id"])) {
     $coach = $result2->fetch_assoc();
 
     $isRole = $user["status"] ==='c';
+} else{
+    header("Location: member-homepage.php");
+    exit;
 }
+
 if($isRole!='c') {
     header("Location: member-homepage.php");
     exit;
 } elseif($coach["inTeam"] == 0) {
     header("Location: coach-homepage.php");
-    exit;
-} else{
-    header("Location: member-homepage.php");
     exit;
 }
 

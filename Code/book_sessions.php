@@ -14,7 +14,7 @@
         <ul class="menubar">
             <a href="member-homepage.html"><img src="images/SFlogo.png" alt="Our Logo"></a>
             <li><a href="member-homepage.html"> HOME </a></li>
-            <li><a class="active" href="aboutus.html"> ABOUT US </a></li>
+            <li><a class="" href="aboutus.html"> ABOUT US </a></li>
         </ul>
             <div class="footer">
                 <div class="icons">

@@ -1,7 +1,7 @@
 <?php
     session_start();
     if(isset($_SESSION['user_id'])){
-        $mysqli = require __DIR__ . "/demo.php";
+        $mysqli = require __DIR__ . "demo.php";
     
         $sql = "SELECT * FROM registration
             WHERE id = {$_SESSION["user_id"]}";
@@ -28,7 +28,7 @@
 
     <body>
         <ul class="menubar">
-            <? if($user["status"]==="c"): ?>
+            <?php if($user["status"]==="c"): ?>
                 <a href="coach-homepage.php"><img src="images/SFlogo.png" alt="Our Logo"></a>
                 <li><a href="coach-homepage.php"> HOME </a></li>
                 <li><a class="active" href="aboutus.php"> ABOUT US </a></li>
@@ -40,9 +40,9 @@
                 <a href="member-homepage.php"><img src="images/SFlogo.png" alt="Our Logo"></a>
                 <li><a href="member-homepage.php"> HOME </a></li>
                 <li><a class="active" href="aboutus.php"> ABOUT US </a></li>
-            <? endif; ?>
+            <?php endif; ?>
         </ul>
-        <!--OMAR SHOULD CHANGE WHERE THE HOME BUTTON AND LOGO REFDIRECTS-->
+       
         <p style="padding-top: 50px;"></p>
         
         <div class="contain">

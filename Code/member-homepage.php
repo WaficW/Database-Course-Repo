@@ -46,7 +46,7 @@ if (isset($_SESSION["user_id"])) {
                 <a href="book-court.php"><div class="row1"><i class='bx bx-wallet'></i><p>Book Court</p></div></a>
                 <a href="settings.php"><div class="row2"><i class='bx bxs-cog'></i><p>My Settings</p></div></a>
                 <a href=""><div class="row2"><i class='bx bx-book'></i><p>My Sessions</p></div></a>
-                <a href=""><div class="row2"><i class='bx bx-wallet'></i><p>My Bookings</p></div></a>
+                <a href="my_bookings.php"><div class="row2"><i class='bx bx-wallet'></i><p>My Bookings</p></div></a>
             </div>
         <?php else: ?>
             <h1 style="margin-left: 50px;"> <a href="login.php">Log in</a></h1>

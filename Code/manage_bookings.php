@@ -48,6 +48,7 @@ $result = mysqli_query($mysqli, $query);
             <div class="table-div">
                 <table class="table">
                     <tr class="table_title">
+                        <td>Booker ID</td>
                         <td>Court ID</td>
                         <td>Sport</td>
                         <td>Start Time</td>
@@ -61,6 +62,7 @@ $result = mysqli_query($mysqli, $query);
                         {
                     ?>
                         <td hidden><?php echo $rows['bookingID']; ?></td>
+                        <td><?php echo $rows['bookerID']; ?></td>
                         <td><?php echo $rows['courtID']; ?></td>
                         <td><?php echo $rows['sport']; ?></td>
                         <td><?php echo $rows['startTime']; ?></td>

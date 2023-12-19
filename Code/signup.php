@@ -64,49 +64,105 @@ if (!$stmt->execute()) {
     }
 }
 
-$sql2 = sprintf("SELECT * FROM registration WHERE email='%s'", $mysqli->real_escape_string($_POST["email"]));
 
-$result = $mysqli->query($sql2);
 
-$userID = $result->fetch_assoc();
+if($_POST["Status"]==='c'){
+    $sql2 = sprintf("SELECT * FROM registration WHERE email='%s'", $mysqli->real_escape_string($_POST["email"]));
 
-if($_POST["sport"] === "footballt"){
-    $sql1 = "UPDATE teams SET coachID=? WHERE teamID=1";
-} elseif($_POST["sport"] === "basketballt"){
-    $sql1 = "UPDATE teams SET coachID=? WHERE teamID=2";
-} elseif($_POST["sport"] === "tabletennist"){
-    $sql1 = "UPDATE teams SET coachID=? WHERE teamID=3";
+    $result = $mysqli->query($sql2);
+
+    $userID = $result->fetch_assoc();
+
+    $inTeam = false;
+
+    if($_POST["sport"] === "footballt"){
+        $sql1 = "UPDATE teams SET coachID=? WHERE teamID=1";
+        $inTeam = true;
+    } elseif($_POST["sport"] === "basketballt"){
+        $sql1 = "UPDATE teams SET coachID=? WHERE teamID=2";
+        $inTeam = true;
+    } elseif($_POST["sport"] === "tabletennist"){
+        $sql1 = "UPDATE teams SET coachID=? WHERE teamID=3";
+        $inTeam = true;
+    }
+
+    if($inTeam){
+        $stmt1 = $mysqli->stmt_init();
+
+        if(!$stmt1->prepare($sql1)){
+            die("SQL error: " . $mysqli->error);
+        }
+
+        $stmt1->bind_param("i",
+                    $userID["id"]);
+        if (!$stmt1->execute()) {
+            if ($mysqli->errno === 1062) {
+                die("coach is coaching another team");
+            } else {
+                die($mysqli->error . " " . $mysqli->errno);
+            }
+        }
+        if($_POST["sport"] === "footballt"){
+            $sql3 = "INSERT INTO coach (id, sport, inTeam)
+                VALUES (?, 'football', true)";
+        } elseif($_POST["sport"] === "basketballt"){
+            $sql3 = "INSERT INTO coach (id, sport, inTeam)
+                VALUES (?, 'basketball', true)";
+        } elseif($_POST["sport"] === "tabletennist"){
+            $sql3 = "INSERT INTO coach (id, sport, inTeam)
+                VALUES (?, 'tabletennis', true)";
+        }
+        
+        $stmt3 = $mysqli->stmt_init();
+        if(!$stmt3->prepare($sql3)){
+            die("SQL error: " . $mysqli->error);
+        }
+        $stmt3->bind_param("i",
+                    $userID["id"]); 
+        if (!$stmt3->execute()) {
+            if ($mysqli->errno === 1062) {
+                die("email already taken");
+            } else {
+                die($mysqli->error . " " . $mysqli->errno);
+            }
+        }       
+    }else{
+        if($_POST["sport"] === "football"){
+            $sql3 = "INSERT INTO coach (id, sport, inTeam)
+                VALUES (?, 'football', false)";
+        } elseif($_POST["sport"] === "basketball"){
+            $sql3 = "INSERT INTO coach (id, sport, inTeam)
+                VALUES (?, 'basketball', false)";
+        } elseif($_POST["sport"] === "tabletennis"){
+            $sql3 = "INSERT INTO coach (id, sport, inTeam)
+                VALUES (?, 'tabletennis', false)";
+        }
+        
+        $stmt3 = $mysqli->stmt_init();
+        if(!$stmt3->prepare($sql3)){
+            die("SQL error: " . $mysqli->error);
+        }
+        $stmt3->bind_param("i",
+                    $userID["id"]);   
+        if (!$stmt3->execute()) {
+            if ($mysqli->errno === 1062) {
+                die("email already taken");
+            } else {
+                die($mysqli->error . " " . $mysqli->errno);
+            }
+        }              
+    }
 }
 
-$stmt1 = $mysqli->stmt_init();
-
-if(!$stmt1->prepare($sql1)){
-    die("SQL error: " . $mysqli->error);
+if($_POST["Status"] === 'm'){
+    $_SESSION["message"] = "Member " . $_POST["firstName"] . " was added successfully";
+}
+if($_POST["Status"] === 's'){
+    $_SESSION["message"] = "Staff " . $_POST["firstName"] . " was added successfully";
+}
+if($_POST["Status"] === 'c'){
+    $_SESSION["message"] = "Coach " . $_POST["firstName"] . " was added successfully";
 }
 
-$stmt1->bind_param("i",
-                   $userID["id"]);
-
-if ($stmt1->execute()) {
-
-    if($_POST["Status"] === 'm'){
-        $_SESSION["message"] = "Member " . $_POST["firstName"] . " was added successfully";
-    }
-    if($_POST["Status"] === 's'){
-        $_SESSION["message"] = "Staff " . $_POST["firstName"] . " was added successfully";
-    }
-    if($_POST["Status"] === 'c'){
-        $_SESSION["message"] = "Coach " . $_POST["firstName"] . " was added successfully";
-    }
-
-    header("Location: /github%20repos/Database-Course-Repo/Code/create-account.php");
-    exit;
-    
-} else {
-    
-    if ($mysqli->errno === 1062) {
-        die("coach is coaching another team");
-    } else {
-        die($mysqli->error . " " . $mysqli->errno);
-    }
-}
+header("Location: /github%20repos/Database-Course-Repo/Code/create-account.php");
+exit;

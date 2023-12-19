@@ -2,10 +2,41 @@
 
 session_start();
 
+if (isset($_SESSION["user_id"])) {
+    
+    $mysqli1 = require __DIR__ . "/demo.php";
+    
+    $sql1 = "SELECT * FROM registration
+            WHERE id = {$_SESSION["user_id"]}";
+            
+    $result1 = $mysqli1->query($sql1);
+
+    $sql2 = "SELECT * FROM coach
+            WHERE id = {$_SESSION["user_id"]}";
+            
+    $result2 = $mysqli1->query($sql2);
+    
+    $user = $result1->fetch_assoc();
+
+    $coach = $result2->fetch_assoc();
+
+    $isRole = $user["status"] ==='c';
+}
+if($isRole!='c') {
+    header("Location: member-homepage.php");
+    exit;
+} elseif($coach["inTeam"] == 0) {
+    header("Location: coach-homepage.php");
+    exit;
+} else{
+    header("Location: member-homepage.php");
+    exit;
+}
+
 require_once('demo.php');
 require_once('delete-ath.php');
 
-$query = 'SELECT * FROM athlete A NATURAL JOIN registration R;';
+$query = sprintf('SELECT * FROM athlete A NATURAL JOIN registration R WHERE teamID IN (SELECT teamID FROM teams WHERE coachID= %d);', $user["id"]);
 $result = mysqli_query($mysqli, $query);
 
 ?>
@@ -24,8 +55,8 @@ $result = mysqli_query($mysqli, $query);
 
     <body>
         <ul class="menubar">
-            <a href="staff-homepage.php"><img src="images/SFlogo.png" alt="Our Logo"></a>
-            <li><a href="staff-homepage.php"> HOME </a></li>
+            <a href="coach-homepage.php"><img src="images/SFlogo.png" alt="Our Logo"></a>
+            <li><a href="coach-homepage.php"> HOME </a></li>
             <li><a class="active" href="aboutus.php"> ABOUT US </a></li>
         </ul>
 
@@ -56,7 +87,7 @@ $result = mysqli_query($mysqli, $query);
                         <td><?php echo $rows['position']; ?></td>
                         <td><?php echo $rows['dob']; ?></td>
                         <td><?php echo $rows['number']; ?></td>
-                        <td><a href="delete.php?id=<?php echo $rows['id'];?>" class="del_button">Delete</a></td>
+                        <td><a href="delete-ath.php?id=<?php echo $rows['id'];?>" class="del_button">Delete</a></td>
                     </tr>
 
                     <?php

@@ -43,7 +43,7 @@ if (isset($_SESSION["user_id"])) {
 
             <div class="menu_select">
                 <a href=""><div class="row1"><i class='bx bx-book'></i><p>Book Sessions</p></div></a>
-                <a href=""><div class="row1"><i class='bx bx-wallet'></i><p>Rent Courts</p></div></a>
+                <a href="book-court.php"><div class="row1"><i class='bx bx-wallet'></i><p>Book Court</p></div></a>
                 <a href="settings.php"><div class="row2"><i class='bx bxs-cog'></i><p>My Settings</p></div></a>
                 <a href=""><div class="row2"><i class='bx bx-book'></i><p>My Sessions</p></div></a>
                 <a href=""><div class="row2"><i class='bx bx-wallet'></i><p>My Reservations</p></div></a>

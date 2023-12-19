@@ -5,7 +5,7 @@ session_start();
 require_once('demo.php');
 require_once('delete.php');
 
-$query = 'SELECT * FROM athlete A, registration R WHERE A.id = R.id';
+$query = 'SELECT * FROM athlete A NATURAL JOIN registration R;';
 $result = mysqli_query($mysqli, $query);
 
 ?>
@@ -36,7 +36,7 @@ $result = mysqli_query($mysqli, $query);
                     <tr class="table_title">
                         <td>First Name</td>
                         <td>Last Name</td>
-                        <td>Wight</td>
+                        <td>Weight</td>
                         <td>Height</td>
                         <td>Position</td>
                         <td>DOB</td>
@@ -48,14 +48,14 @@ $result = mysqli_query($mysqli, $query);
                         while($rows=mysqli_fetch_assoc($result))
                         {
                     ?>
-                        <td hidden><?php echo $rows['R.id']; ?></td>
-                        <td><?php echo $rows['R.firstName']; ?></td>
-                        <td><?php echo $rows['R.lastName']; ?></td>
-                        <td><?php echo $rows['A.weight']; ?></td>
-                        <td><?php echo $rows['A.height']; ?></td>
-                        <td><?php echo $rows['A.position']; ?></td>
-                        <td><?php echo $rows['A.dob']; ?></td>
-                        <td><?php echo $rows['R.number']; ?></td>
+                        <td hidden><?php echo $rows['id']; ?></td>
+                        <td><?php echo $rows['firstName']; ?></td>
+                        <td><?php echo $rows['lastName']; ?></td>
+                        <td><?php echo $rows['weight']; ?></td>
+                        <td><?php echo $rows['height']; ?></td>
+                        <td><?php echo $rows['position']; ?></td>
+                        <td><?php echo $rows['dob']; ?></td>
+                        <td><?php echo $rows['number']; ?></td>
                         <td><a href="delete.php?id=<?php echo $rows['id'];?>" class="del_button">Delete</a></td>
                     </tr>
 

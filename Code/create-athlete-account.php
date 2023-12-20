@@ -11,11 +11,25 @@ if (isset($_SESSION["user_id"])) {
             
     $result = $mysqli->query($sql);
     
+    $sql2 = "SELECT * FROM coach
+            WHERE id = {$_SESSION["user_id"]}";
+            
+    $result2 = $mysqli->query($sql2);
+
     $user = $result->fetch_assoc();
+
+    $coach = $result2->fetch_assoc();
 
     $isRole = $user["status"] ==='c';
 } else {
     header("Location: member-homepage.php");
+    exit;
+}
+if($isRole!='c') {
+    header("Location: member-homepage.php");
+    exit;
+} elseif($coach["inTeam"] == 0) {
+    header("Location: coach-homepage.php");
     exit;
 }
 
